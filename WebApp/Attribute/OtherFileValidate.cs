@@ -38,14 +38,9 @@ namespace WebApp.Attribute
             //IsRequired Validation
             if (file == null || file.Length == 0)
             {
-                if (IsRequied)
-                {
-                    return new ValidationResult(RequiredErrorMessage);
-                }
-                else
-                {
-                    return ValidationResult.Success;
-                }
+                return IsRequied 
+                    ? new ValidationResult(RequiredErrorMessage) 
+                    : ValidationResult.Success;
             }
 
             // File size validation
@@ -53,6 +48,7 @@ namespace WebApp.Attribute
             {
                 return new ValidationResult(MaximumFileSizeErrorMessage);
             }
+
 
             // Mimetype validation
             using (var stream = file.OpenReadStream())
