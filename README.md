@@ -1,2 +1,4 @@
 # FileValidation
-Sample to validate file with MimetypeDetective package
+A Sample to validate file with MimetypeDetective package
+
+This solution contains the custom attributes to validate file content.
