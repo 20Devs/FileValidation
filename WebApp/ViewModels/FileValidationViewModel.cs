@@ -5,7 +5,12 @@ namespace WebApp.ViewModels
 {
     public class FileValidationViewModel
     {
-        [FileValidate(
+        //[FileValidate(
+        //    IsRequied = false, RequiredErrorMessage = "Please, select your logo",
+        //    MaximumFileSize = 2 * 1024 * 1024, MaximumFileSizeErrorMessage = "Your file is too big",
+        //    ExtensionAcceptable = "jpg,bmp,png", ExtensionAcceptableErrorMessage = "Your logo not supported"
+        //)]
+        [OtherFileValidate(
             IsRequied = false, RequiredErrorMessage = "Please, select your logo",
             MaximumFileSize = 2 * 1024 * 1024, MaximumFileSizeErrorMessage = "Your file is too big",
             ExtensionAcceptable = "jpg,bmp,png", ExtensionAcceptableErrorMessage = "Your logo not supported"
